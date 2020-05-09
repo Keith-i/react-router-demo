@@ -3,6 +3,7 @@ import RouterDemo from './view/routerDemo'
 import Home from './view/home'
 import My from './view/my'
 import Nav from './view/Nav'
+import Ucenter from './view/Ucenter'
 import {
   HashRouter as Router,
   Switch,
@@ -16,12 +17,9 @@ function App() {
       <RouterDemo />
       <Router>
         <Nav />
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/my">
-          <My />
-        </Route>
+        <Route path="/" component={ Home } exact></Route>
+        <Route path="/my" component={ My } exact></Route>
+        <Route path="/my/ucenter" component={ Ucenter }></Route>
       </Router>
     </div>
   );
