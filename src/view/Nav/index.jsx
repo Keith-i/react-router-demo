@@ -17,6 +17,9 @@ class Nav extends Component {
           <li>
             <Link to="/my/ucenter">UCENTER</Link>
           </li>
+          <li>
+            <Link to="/demo">DEMO</Link>
+          </li>
         </ul>
       </div>
     )
