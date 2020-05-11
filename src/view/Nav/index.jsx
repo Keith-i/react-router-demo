@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import './style.css'
 import {
-  Link
+  Link,
+  NavLink
 } from "react-router-dom"
 
 class Nav extends Component {
@@ -9,16 +11,16 @@ class Nav extends Component {
       <div>
         <ul>
           <li>
-            <Link to="/">HOME</Link>
+            <NavLink to="/" activeClassName="select" exact>HOME</NavLink>
           </li>
           <li>
-            <Link to="/my">MY</Link>
+            <NavLink to="/my" activeClassName="select" exact>MY</NavLink>
           </li>
           <li>
-            <Link to="/my/ucenter">UCENTER</Link>
+            <NavLink to="/my/ucenter" activeClassName="select" exact>UCENTER</NavLink>
           </li>
           <li>
-            <Link to="/demo">DEMO</Link>
+            <NavLink to="/demo" activeClassName="select" exact>DEMO</NavLink>
           </li>
         </ul>
       </div>
