@@ -23,6 +23,9 @@ class Nav extends Component {
             <NavLink to="/my/ucenter/1001" activeClassName="select" exact>UCENTER</NavLink>
           </li>
           <li>
+            <NavLink to="/shop" exact>SHOP</NavLink>
+          </li>
+          <li>
             <NavLink to={{
               pathname: "/demo",
               search: '?name=123&age=xx',
