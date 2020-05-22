@@ -11,7 +11,8 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom"
 
 function App() {
@@ -23,9 +24,10 @@ function App() {
         <Switch>
           <Route path="/" component={ Home } exact></Route>
           <Route path="/my" component={ My } exact></Route>
-          <Route path="/my/ucenter/:id" component={ Ucenter }></Route>
+          <Route path="/my/ucenter/:id" component={ Ucenter } exact></Route>
           <Route path="/demo" render={ (props) => <Demo {...props} name="你好" /> }></Route>
           <Route path="/newtest" component={ Newtest }></Route>
+          <Redirect from="/hellomy" to="/my" exact></Redirect>
           <Route component={ NotFound }></Route>
         </Switch>
       </Router>
