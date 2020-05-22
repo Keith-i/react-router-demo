@@ -10,6 +10,7 @@ import React, { Component } from 'react'
 class demo extends Component {
   constructor(props) {
     super(props)
+    console.log(props, 'demo-proprs')
   }
   render() {
     return (
