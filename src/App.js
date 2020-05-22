@@ -22,7 +22,7 @@ function App() {
         <Switch>
           <Route path="/" component={ Home } exact></Route>
           <Route path="/my" component={ My } exact></Route>
-          <Route path="/my/ucenter" component={ Ucenter }></Route>
+          <Route path="/my/ucenter/:id" component={ Ucenter }></Route>
           <Route path="/demo" render={ (props) => <Demo {...props} name="你好" /> }></Route>
           <Route component={ NotFound }></Route>
         </Switch>

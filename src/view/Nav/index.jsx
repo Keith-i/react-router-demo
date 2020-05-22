@@ -17,7 +17,7 @@ class Nav extends Component {
             <NavLink to="/my" activeClassName="select" exact>MY</NavLink>
           </li>
           <li>
-            <NavLink to="/my/ucenter" activeClassName="select" exact>UCENTER</NavLink>
+            <NavLink to="/my/ucenter/1001" activeClassName="select" exact>UCENTER</NavLink>
           </li>
           <li>
             <NavLink to="/demo" activeClassName="select" exact>DEMO</NavLink>
