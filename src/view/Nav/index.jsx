@@ -26,6 +26,9 @@ class Nav extends Component {
             <NavLink to="/test" activeClassName="select" exact>TEST</NavLink>
           </li>
           <li>
+            <NavLink to="/book" activeClassName="select" exact>BOOK</NavLink>
+          </li>
+          <li>
             <NavLink to="/shop" exact>SHOP</NavLink>
           </li>
           <li>

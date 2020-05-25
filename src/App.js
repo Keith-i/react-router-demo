@@ -9,6 +9,9 @@ import NotFound from './view/NotFound'
 import Demo from './view/demo'
 import Shop from './view/shop'
 import Test from './view/test'
+import Book from './view/book'
+import WEBbook from './view/bookChildren/WEBbook'
+import JAVAbook from './view/bookChildren/JAVAbook'
 import {
   HashRouter as Router,
   Switch,
@@ -32,6 +35,13 @@ function App() {
           <Redirect from="/hellomy" to="/my" exact></Redirect>
           <Route path="/shop" component={ Shop }></Route>
           <Route path="/test" component={ Test }></Route>
+          {/* <Route path="/book" component={ Book }></Route> */}
+          <Book>
+            <Switch>
+              <Route path="/book/webbook" component={WEBbook}></Route>
+              <Route path="/book/javabook" component={JAVAbook}></Route>
+            </Switch>
+          </Book>
           <Route component={ NotFound }></Route>
         </Switch>
       </Router>
