@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Prompt } from 'react-router-dom'
 
 class test extends Component {
   constructor(props) {
@@ -18,6 +19,10 @@ class test extends Component {
   render() {
     return(
       <div>测试：{this.state.name}
+        <Prompt
+          when={!!this.state.name}
+          message={ '确定关闭页面？' }
+        />
         <input type="text" value={this.state.name} onChange={ this.hander } />
       </div>
     )
