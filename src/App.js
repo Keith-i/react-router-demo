@@ -8,6 +8,7 @@ import Newtest from './view/newtest'
 import NotFound from './view/NotFound'
 import Demo from './view/demo'
 import Shop from './view/shop'
+import Test from './view/test'
 import {
   HashRouter as Router,
   Switch,
@@ -30,6 +31,7 @@ function App() {
           <Route path="/newtest" component={ Newtest }></Route>
           <Redirect from="/hellomy" to="/my" exact></Redirect>
           <Route path="/shop" component={ Shop }></Route>
+          <Route path="/test" component={ Test }></Route>
           <Route component={ NotFound }></Route>
         </Switch>
       </Router>
