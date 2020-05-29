@@ -12,6 +12,7 @@ import Test from './view/test'
 import Book from './view/book'
 import WEBbook from './view/bookChildren/WEBbook'
 import JAVAbook from './view/bookChildren/JAVAbook'
+import Parent from './components/coms/Parent'
 import {
   HashRouter as Router,
   Switch,
@@ -45,6 +46,8 @@ function App() {
           <Route component={ NotFound }></Route>
         </Switch>
       </Router>
+
+      <Parent />
     </div>
   );
 }
