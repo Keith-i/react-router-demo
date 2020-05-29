@@ -23,7 +23,7 @@ const MyDemo = (props) => {
   }
   return(
     <div>
-      pp：
+      子元素pp：
       <button onClick={ clickHandle }>跳转到Demo页</button>
     </div>
   )
