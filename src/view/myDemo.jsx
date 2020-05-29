@@ -21,10 +21,15 @@ const MyDemo = (props) => {
     console.log(props)
     props.history.push('/demo')
   }
+  let clickHandle2 = () => {
+    console.log(props)
+    props.history.replace('/demo')
+  }
   return(
     <div>
       子元素pp：
-      <button onClick={ clickHandle }>跳转到Demo页</button>
+      <button onClick={ clickHandle }>跳转到Demo页 push方式</button>
+      <button onClick={ clickHandle2 }>跳转到Demo页 replace方式</button>
     </div>
   )
 }
