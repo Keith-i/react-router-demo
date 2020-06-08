@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import counter from './reducers/counter'
+import rootReducer from './reducers'
+// import counter from './reducers/counter'
 
 // // 创建store仓库
-const store = createStore(counter)
+const store = createStore(rootReducer)
 // store.subscribe(() => {
 //   console.log('state:', store.getState())
 // })
