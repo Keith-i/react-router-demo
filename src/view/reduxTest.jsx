@@ -4,29 +4,33 @@ import counter from '../reducers/counter'
 
 // 创建store仓库
 const store = createStore(counter)
-store.subscribe(() => {
-  console.log('state:', store.getState())
-})
 
-class reduxTest extends Component {
-  constructor(props) {
-    super(props)
-  }
+// class reduxTest extends Component {
 
-  zzx = () => {
-    console.log(this)
-  }
-
-  render(props) {
-    return (
-      <div>
-        reduxTest{this.props.sss}
-        <button onClick={ () => store.dispatch({ type: 'INCREMENT' }) }>增加</button>
-        <button onClick={ () => store.dispatch({ type: 'DECREMENT' }) }>减少</button>
-        <button onClick={ this.zzx }>xxx</button>
-      </div>
-    )
-  }
+//   render() {
+//     return (
+//       <div>
+//         reduxTest{ store.getState() }
+//         <button onClick={ () => store.dispatch({ type: 'INCREMENT' }) }>增加</button>
+//         <button onClick={ () => store.dispatch({ type: 'DECREMENT' }) }>减少</button>
+//       </div>
+//     )
+//   }
+// }
+function reduxTest() {
+  return (
+    <div>
+      reduxTest{ store.getState() }
+      <button onClick={ () => store.dispatch({ type: 'INCREMENT' }) }>增加</button>
+      <button onClick={ () => store.dispatch({ type: 'DECREMENT' }) }>减少</button>
+    </div>
+  )
 }
 
 export default reduxTest
+
+// let bb = new reduxTest()
+store.subscribe(() => {
+    console.log('state:', store.getState())
+    reduxTest()
+})
