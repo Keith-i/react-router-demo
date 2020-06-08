@@ -14,6 +14,7 @@ import WEBbook from './view/bookChildren/WEBbook'
 import JAVAbook from './view/bookChildren/JAVAbook'
 import Parent from './components/coms/Parent'
 import ReduxTest from './view/reduxTest'
+import User from './view/user'
 import {
   HashRouter as Router,
   Switch,
@@ -51,6 +52,7 @@ function App() {
 
       <Parent />
       <ReduxTest />
+      <User />
     </div>
   );
 }
