@@ -13,7 +13,7 @@ import Book from './view/book'
 import WEBbook from './view/bookChildren/WEBbook'
 import JAVAbook from './view/bookChildren/JAVAbook'
 import Parent from './components/coms/Parent'
-import reduxTest from './view/reduxTest'
+import ReduxTest from './view/reduxTest'
 import {
   HashRouter as Router,
   Switch,
@@ -38,7 +38,7 @@ function App() {
           <Route path="/shop" component={ Shop } exact></Route>
           <Route path="/test" component={ Test } exact></Route>
           {/* <Route path="/book" component={ Book }></Route> */}
-          <Route path="/reduxTest" component={ reduxTest } exact></Route>
+          {/* <Route path="/reduxTest" component={ reduxTest } exact></Route> */}
           <Book exact>
             <Switch>
               <Route path="/book/webbook" component={WEBbook}></Route>
@@ -50,6 +50,7 @@ function App() {
       </Router>
 
       <Parent />
+      <ReduxTest />
     </div>
   );
 }
