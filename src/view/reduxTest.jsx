@@ -21,8 +21,8 @@ class reduxTest extends Component {
         reduxTest{this.props.counter}
         {/* <button onClick={ () => increment() }>增加</button>
         <button onClick={ () => decrement() }>减少</button> */}
-        <button onClick={ () => this.props.counterAction.increment() }>增加</button>
-        <button onClick={ () => this.props.counterAction.decrement() }>减少</button>
+        <button onClick={ () => this.props.counterAction.increment(10) }>增加</button>
+        <button onClick={ () => this.props.counterAction.decrement(5) }>减少</button>
       </div>
     )
   }
