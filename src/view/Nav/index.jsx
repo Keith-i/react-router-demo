@@ -42,6 +42,9 @@ class Nav extends Component {
           <li>
             <NavLink to="/newtest?aa=11&bb=22" activeClassName="select" exact>Newtest</NavLink>
           </li>
+          <li>
+            <NavLink to="/reduxTest" exact>reduxTest</NavLink>
+          </li>
         </ul>
       </div>
     )
