@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 // import { createStore } from 'redux'
 // import counter from '../reducers/counter'
 import { connect } from 'react-redux'
-import { increment, decrement } from '../action/counter'
+// import { increment, decrement } from '../action/counter'
+import * as counterAction from '../action/counter'
+import { bindActionCreators } from 'redux'
 
 // 创建store仓库
 // const store = createStore(counter)
@@ -13,12 +15,14 @@ import { increment, decrement } from '../action/counter'
 class reduxTest extends Component {
   render() {
     console.log(this.props)
-    const {increment, decrement} = this.props
+    // const {increment, decrement} = this.props
     return (
       <div>
         reduxTest{this.props.counter}
-        <button onClick={ () => increment() }>增加</button>
-        <button onClick={ () => decrement() }>减少</button>
+        {/* <button onClick={ () => increment() }>增加</button>
+        <button onClick={ () => decrement() }>减少</button> */}
+        <button onClick={ () => this.props.counterAction.increment() }>增加</button>
+        <button onClick={ () => this.props.counterAction.decrement() }>减少</button>
       </div>
     )
   }
@@ -40,9 +44,12 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
+  // return {
+  //   increment: () => { dispatch(increment()) },
+  //   decrement: () => { dispatch(decrement()) }
+  // }
   return {
-    increment: () => { dispatch(increment()) },
-    decrement: () => { dispatch(decrement()) }
+    counterAction: bindActionCreators(counterAction, dispatch)
   }
 }
 
