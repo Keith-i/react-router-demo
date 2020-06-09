@@ -8,8 +8,8 @@ class user extends Component {
   render() {
     return(
       <div className="continer">
-        <p style={textCenter}>5555</p>
-        <button onClick={this.props.userAction.addUser}>测试</button>
+        <p style={textCenter}>{this.props.user}</p>
+        <button onClick={() => this.props.userAction.addUser('userTXT')}>测试</button>
       </div>
     )
   }
@@ -18,7 +18,7 @@ class user extends Component {
 const mapStateToProps = (state) => {
   console.log(state, 'user')
   return {
-    counter: state.user
+    user: state.user.user
   }
 }
 
