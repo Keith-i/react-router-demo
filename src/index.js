@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
 import rootReducer from './reducers'
 import logger from 'redux-logger'  // 提供的中间件
 import thunk from 'redux-thunk'
@@ -29,7 +30,7 @@ import thunk from 'redux-thunk'
 
 // // 创建store仓库
 // const store = createStore(rootReducer, {}, applyMiddleware(logger, error))
-const store = createStore(rootReducer, {}, applyMiddleware(logger, thunk))
+const store = createStore(rootReducer, {}, composeWithDevTools(applyMiddleware(logger, thunk)))
 // store.subscribe(() => {
 //   console.log('state:', store.getState())
 // })
