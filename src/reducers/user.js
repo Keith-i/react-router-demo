@@ -7,15 +7,15 @@ const user = ( state = initialState, action ) => {
   switch(action.type) {
     case 'ADD_USER_SUCCESS':
       return {
-        ifFetching: true,
+        isFetching: false,
         error: null,
         user: action.user
       }
     case 'FETCH_USER_REQUEST':
       return {
-        ifFetching: true,
+        isFetching: true,
         error: null,
-        user: action.user
+        user: {}
       }
     case 'FETCH_USER_FAILURE':
       return {
