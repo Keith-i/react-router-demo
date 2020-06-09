@@ -1,7 +1,7 @@
 export const fetch_user = (user) => {
   console.log('ccc')
   return {
-    type: 'ADD_USER',
+    type: 'ADD_USER_SUCCESS',
     user
   }
 }
