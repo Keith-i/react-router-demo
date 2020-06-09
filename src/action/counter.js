@@ -1,7 +1,19 @@
+// export const increment = (num) => {
+//   return {
+//     type: 'INCREMENT',
+//     num
+//   }
+// }
+
+// 异步
 export const increment = (num) => {
-  return {
-    type: 'INCREMENT',
-    num
+  return dispatch => {
+    setTimeout(() => {
+      dispatch({
+        type: 'INCREMENT',
+        num
+      })
+    }, 1000)
   }
 }
 

@@ -4,8 +4,12 @@ import App from './App';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './reducers'
-import logger from 'redux-logger'
+import logger from 'redux-logger'  // 提供的中间件
+import thunk from 'redux-thunk'
 // import counter from './reducers/counter'
+
+// 异步和同步
+
 
 // 自行手写的中间件
 // const logger = store => next => action => {
@@ -25,7 +29,7 @@ import logger from 'redux-logger'
 
 // // 创建store仓库
 // const store = createStore(rootReducer, {}, applyMiddleware(logger, error))
-const store = createStore(rootReducer, {}, applyMiddleware(logger))
+const store = createStore(rootReducer, {}, applyMiddleware(logger, thunk))
 // store.subscribe(() => {
 //   console.log('state:', store.getState())
 // })
