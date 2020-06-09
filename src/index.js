@@ -2,12 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './reducers'
+import logger from 'redux-logger'
 // import counter from './reducers/counter'
 
+// 自行手写的中间件
+// const logger = store => next => action => {
+//   console.log("dispatch->", action)
+//   let result = next(action) // 加载下一个中间件
+//   console.log("next state->", store.getState())
+//   return result
+// }
+
+// const error = store => next => action => {
+//   try {
+//     next(action)
+//   } catch(e) {
+//     console.log("error->", e)
+//   }
+// }
+
 // // 创建store仓库
-const store = createStore(rootReducer)
+// const store = createStore(rootReducer, {}, applyMiddleware(logger, error))
+const store = createStore(rootReducer, {}, applyMiddleware(logger))
 // store.subscribe(() => {
 //   console.log('state:', store.getState())
 // })
