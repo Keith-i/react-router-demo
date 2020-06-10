@@ -32,6 +32,9 @@ class Nav extends Component {
             <NavLink to="/shop" exact>SHOP</NavLink>
           </li>
           <li>
+            <NavLink to="/demo1" exact>demo1</NavLink>
+          </li>
+          <li>
             <NavLink to={{
               pathname: "/demo",
               search: '?name=123&age=xx',

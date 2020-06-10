@@ -15,6 +15,7 @@ import JAVAbook from './view/bookChildren/JAVAbook'
 import Parent from './components/coms/Parent'
 import ReduxTest from './view/reduxTest'
 import User from './view/user'
+import Dparent from './components/coms/Demo1/Dparent'
 import {
   HashRouter as Router,
   Switch,
@@ -38,6 +39,7 @@ function App() {
           <Redirect from="/hellomy" to="/my" exact></Redirect>
           <Route path="/shop" component={ Shop } exact></Route>
           <Route path="/test" component={ Test } exact></Route>
+          <Route path="/demo1" component={ Dparent } exact ></Route>
           {/* <Route path="/book" component={ Book }></Route> */}
           {/* <Route path="/reduxTest" component={ reduxTest } exact></Route> */}
           <Book exact>
