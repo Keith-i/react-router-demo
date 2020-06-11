@@ -3,6 +3,7 @@ import Demo2 from '../components/coms/Demo2'
 import Demo3 from '../components/coms/Demo3'
 import Demo4 from '../components/coms/Demo4'
 import Banner from '../components/coms/Demo5/New/NewBanner'
+import SixParent from '../components/coms/Demo6/sixParent'
 
 class Home extends Component {
   render() {
@@ -13,6 +14,7 @@ class Home extends Component {
         <Demo3 />
         <Demo4 />
         <Banner />
+        <SixParent />
       </div>
     )
   }
